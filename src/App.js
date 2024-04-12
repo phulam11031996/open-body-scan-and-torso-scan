@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const handleShowTorsoScan = (e) => {
+		e.preventDefault();
+		const modal = document.getElementById("torso-scan-modal-k28vew83vj");
+		modal.style.display = "block";
+	};
+
+	const handleShowBodyScan = (e) => {
+		e.preventDefault();
+		const modal = document.getElementById("body-scan-modal-k28vew83vj");
+		modal.style.display = "block";
+	};
+	return (
+		<div
+			style={{
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				width: "100swh",
+				height: "100svh",
+				gap: "10px",
+			}}
+		>
+			<button
+				className="btn"
+				style={{
+					backgroundColor: "#00B7F4",
+					color: "white",
+					padding: "1rem",
+					border: 0,
+					fontSize: "1rem",
+					borderRadius: "30px",
+					cursor: "pointer",
+				}}
+				onClick={(e) => handleShowBodyScan(e)}
+			>
+				Show body scan
+			</button>
+			<button
+				className="btn"
+				style={{
+					backgroundColor: "#00B7F4",
+					color: "white",
+					padding: "1rem",
+					border: 0,
+					fontSize: "1rem",
+					borderRadius: "30px",
+					cursor: "pointer",
+				}}
+				onClick={(e) => handleShowTorsoScan(e)}
+			>
+				Show torso scan
+			</button>
+		</div>
+	);
 }
 
 export default App;
