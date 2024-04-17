@@ -1,6 +1,12 @@
 import "./App.css";
 
 function App() {
+  useEffect(() => {
+    window.addEventListener("message", (ev) => {
+      // Do something with your image data
+      console.log(ev.data);
+    });
+  }, []);
   const handleShowTorsoScan = (e) => {
     e.preventDefault();
     const modal = document.getElementById("torso-scan-modal-k28vew83vj");
