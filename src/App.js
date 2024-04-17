@@ -1,7 +1,8 @@
 import "./App.css";
+import React from "react";
 
 function App() {
-  useEffect(() => {
+  React.useEffect(() => {
     window.addEventListener("message", (ev) => {
       // Do something with your image data
       console.log(ev.data[0]);
