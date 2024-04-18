@@ -5,7 +5,7 @@ function App() {
   React.useEffect(() => {
     window.addEventListener("message", (ev) => {
       // Do something with your image data
-      console.log(ev.data[0]);
+      console.log(ev.data);
     });
   }, []);
 
